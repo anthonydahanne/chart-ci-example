@@ -21,7 +21,7 @@ steps:
     imageName: 'alpine:latest'
     volumes: |
       $(build.sourcesDirectory):/chart-ci-example
-    containerCommand: 'wget -P /chart-ci-example/ https://anthonydahanne.github.io/index.yaml'
+    containerCommand: 'wget -P /chart-ci-example/ https://anthonydahanne.github.io/chart-ci-example/index.yaml'
     detached: false   
 - task: Docker@0
   displayName: 'Generate helm index.yaml'
