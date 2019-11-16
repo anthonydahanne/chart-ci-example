@@ -7,7 +7,7 @@ steps:
   inputs:
     containerRegistryType: 'Container Registry'
     action: 'Run an image'
-    imageName: 'alpine/helm'
+    imageName: 'alpine/helm:2.16.1'
     volumes: |
       $(build.sourcesDirectory):/chart-ci-example
     containerCommand: 'package --save=false .'
@@ -28,7 +28,7 @@ steps:
   inputs:
     containerRegistryType: 'Container Registry'
     action: 'Run an image'
-    imageName: 'alpine/helm'
+    imageName: 'alpine/helm:2.16.1'
     volumes: |
       $(build.sourcesDirectory):/chart-ci-example
     containerCommand: 'repo index --merge index.yaml .'
