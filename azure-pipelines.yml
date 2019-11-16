@@ -36,7 +36,7 @@ steps:
     detached: false    
 - bash: |
     # setup Github Pages branch and repo to push to
-    gh_url="https://$GT@github.com/anthonydahanne/chart-ci-example.git"
+    gh_url="https://%GT%@github.com/anthonydahanne/chart-ci-example.git"
     gh_branch=gh-pages
     gh_source="#${SYSTEM_PULLREQUEST_PULLREQUESTNUMBER}"
     
