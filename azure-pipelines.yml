@@ -58,6 +58,6 @@ steps:
     git add index.yaml *.tgz
     git status
     git commit -m "Update repository with latest helm chart from ${gh_source} ${COMMIT}" index.yaml *.tgz
-    git push https://$(gt)@github.com/anthonydahanne/chart-ci-example.git gh-pages
+    git push https://$(github_PAT)@github.com/anthonydahanne/chart-ci-example.git gh-pages
   displayName: 'Commit Helm Charts'
   condition: not(eq(variables['Build.Reason'], 'PullRequest'))
